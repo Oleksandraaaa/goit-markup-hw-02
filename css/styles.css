@@ -1,0 +1,64 @@
+/* цвет заголовков #212121 */
+/* цвет текста #757575 */
+/* цвет заглавия #ffffff */
+/* акцент #2196F3 */
+/* вторичный цвет фона ##F5F4FA */
+
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+}
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+}
+ul {
+  list-style: none;
+}
+
+/* logo */
+.logo {
+  color: var(--accent-color);
+}
+.logo-text {
+  color: var(--title-text-color);
+}
+
+/* site-nav list */
+.site-nav .link a {
+  color: var(--title-text-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+.site-nav .link.current {
+  color: var(--title-text-color);
+}
+
+/*site-contacts list */
+.contact-nav .link a {
+  color: var(--primary-text-color);
+}
+.contact-nav .link:hover,
+.contact-nav .link:focus {
+  color: var(--accent-color);
+}
+
+/* advertisement */
+.advertisement-title {
+  color: #ffffff;
+}
+
+/* section */
+.section-title {
+  color: var(--title-text-color);
+}
+
+/* button */
+.advertisement-button {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
