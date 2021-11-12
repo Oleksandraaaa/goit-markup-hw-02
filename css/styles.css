@@ -6,90 +6,100 @@
 /* вторичный цвет фона #FFFFFF */
 
 :root {
-  --primary-text-color: #757575;
-  --title-text-color: #212121;
+  --main-title-color: #ffffff;
+  --second-title-color: #212121;
+  --first-text-color: #757575;
+  --second-text-color: rgba(255, 255, 255, 0.6);
+  --first-button-color: #ffffff;
+  --second-button-color: #212121;
   --accent-color: #2196f3;
-  --primary-white-color: #ffffff;
+  --first-background-color: #2f303a;
+  --second-background-color: #f5f4fa;
 }
 body {
-  background-color: var(--primary-white-color);
-  color: var(--primary-text-color);
-
   font-family: Roboto, sans-serif;
+  color: var(--firt-text-color);
+  background-color: #ffffff;
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.18;
+  font-style: normal;
 }
-ul {
+.list {
   list-style: none;
 }
-
-/* logo */
-.logo {
-  color: var(--accent-color);
-  font-family: Raleway, cursive;
-  font-size: 26px;
-  line-height: 1.19;
+.link {
+  text-decoration: none;
 }
-.logo-text {
-  color: var(--title-text-color);
-  font-family: Raleway, cursive;
-  font-size: 26px;
-  line-height: 1.19;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
-.logo-item {
-  color: var(--primary-white-color);
-  font-family: Raleway, cursive;
-  font-size: 26px;
-  line-height: 1.19;
-}
-
-/* site-navigation list */
-.site-nav .link a {
-  color: var(--title-text-color);
+/*-----------------HEADER--------------*/
+.header-link {
   font-weight: 500;
+  font-size: inherit;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--second-title-color);
 }
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link .current {
-  color: var(--accent-color);
-}
-
-/* contacts list */
-.contact-nav .link a {
-  color: var(--primary-text-color);
-  font-style: normal;
-  color: rgba(255, 255, 255, 0.6);
-}
-.address {
-  font-style: normal;
+.header-mail,
+.header-tel {
+  font-weight: 500;
   font-size: 14px;
-  line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--first-text-color);
 }
-.contact-nav .link:hover,
-.contact-nav .link:focus {
+.header-link:hover,
+.header-link:focus {
   color: var(--accent-color);
 }
-
-/* advertisement */
-.advertisement,
-.contacts {
-  background-color: #2f303a;
+.header-mail:hover,
+.header-mail:focus {
+  color: var(--accent-color);
+}
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--accent-color);
+}
+.logo {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+}
+.logo-accent {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--second-title-color);
+}
+/*------------------ ADVERTISEMENT------------- */
+.advertisement {
+  background-color: var(--first-background-color);
 }
 .advertisement-title {
-  color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-title-color);
 }
-/* button */
 .advertisement-button {
-  color: var(--primary-white-color);
+  color: var(--first-button-color);
   background-color: var(--accent-color);
   font-family: inherit;
   font-weight: 700;
@@ -100,71 +110,109 @@ ul {
   letter-spacing: 0.06em;
   cursor: pointer;
 }
-
-/* section benefits */
-.section {
-  background-color: #e5e5e5;
+/*------------------BENEFITS---------------- */
+.benefits {
+  background-color: var(--second-background-color);
 }
-.section .benefits {
-  color: var(--title-text-color);
+.benefits-title {
   font-weight: 700;
   line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--second-title-color);
 }
-.section .text {
-  color: var(--primary-text-color);
+.benefits-text {
   line-height: 1.71;
+  color: var(--first-text-color);
 }
-
-/* section-title */
-.section-title {
+/*-----------------EXAMPLES-------------------*/
+.examples {
+  background-color: var(--second-background-color);
+}
+.examples-title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 }
-/* section team-job */
-.section-people {
-  background-color: #f5f4fa;
+/*----------------TEAM----------------------*/
+.team {
+  background-color: var(--second-background-color);
 }
-.section-people .team {
-  color: var(--title-text-color);
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  color: var(--second-title-color);
+}
+.team-workers-title {
   font-weight: 500;
   font-size: 16px;
+  line-height: 1.19;
+  color: var(--second-title-color);
 }
-.section-title .job {
-  color: var(--primary-text-color);
+.team-text {
   font-size: 16px;
+  line-height: 1.9;
+  color: var(--first-text-color);
+}
+/*---------------FOOTER------------------*/
+.footer {
+  background-color: var(--first-background-color);
+}
+.footer-logo {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: white;
+}
+.footer-logo-accent {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+}
+.address-map-link {
+  font-style: normal;
+  line-height: 1.71;
+  color: var(--main-title-color);
+}
+.footer-mail,
+.footer-tel {
+  font-style: normal;
+  line-height: 1.71;
+  color: var(--second-text-color);
 }
 
 /* Стили для portfolio.html */
-/* button */
-.navigation-button {
-  color: var(--title-text-color);
-  background-color: var(--primary-text-color);
+/*---------------------PROJECTS-------------------*/
+.projects-button {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   cursor: pointer;
+  color: var(--second-button-color);
+  background-color: var(--second-background-color);
 }
-.navigation-button:hover,
-.navigation-button:focus {
-  color: var(--primary-white-color);
+.projects-button:hover,
+.projects-button:focus {
   background-color: var(--accent-color);
+  color: var(--first-button-color);
 }
-
-/* Наши работы */
-.name {
-  color: var(--title-text-color);
+/*-------------------NAME LIST-----------------*/
+.name-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--second-title-color);
 }
-.project {
-  color: var(--primary-text-color);
+.name-text {
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.87px;
+  color: var(--first-text-color);
 }
